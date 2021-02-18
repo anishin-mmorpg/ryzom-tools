@@ -1,0 +1,212 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "Special"
+    BEGIN
+        MENUITEM "Run compiler test",           ID_SPECIAL_RUNCOMPILERTEST
+        MENUITEM "Validate missions",           ID_SPECIAL_VALIDATE_MISSIONS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_ADD_PATH DIALOG 0, 0, 283, 46
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION
+CAPTION "Init compiler..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ADD_PATH,7,7,269,32,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_MISSION_COMPILER_FE_DIALOG DIALOGEX 0, 0, 361, 322
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Primitive tool"
+MENU IDR_MENU1
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&COMPILE",IDC_COMPILE,155,242,50,14,WS_DISABLED
+    PUSHBUTTON      "&QUIT",IDCANCEL,156,301,50,14
+    LISTBOX         IDC_LIST_SRC,7,125,136,190,LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_DST,218,113,136,202,LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Available Primitive files",IDC_STATIC,7,90,136,11
+    CTEXT           "Selected primitive",IDC_STATIC,218,90,136,15
+    PUSHBUTTON      ">>",IDC_ADD,156,128,50,16
+    PUSHBUTTON      "<<",IDC_REMOVE,156,175,50,16
+    PUSHBUTTON      "Change directory ...",IDC_CHANGE_DIR,7,7,72,16
+    PUSHBUTTON      "ALL >>",IDC_ADD_ALL,156,146,50,16
+    EDITTEXT        IDC_FILTER,32,104,112,14,ES_AUTOHSCROLL
+    ICON            IDI_ICON_FILTER,IDC_STATIC,8,104,21,20,SS_REALSIZEIMAGE
+    DEFPUSHBUTTON   "COMPILE &PUBLISH",IDC_PUBLISH,155,259,50,26,BS_MULTILINE | WS_DISABLED
+    PUSHBUTTON      "&VALIDATE",IDC_VALIDATE,155,225,50,14,WS_DISABLED
+    EDITTEXT        IDC_DATA_DIRECTORY,89,7,265,15,ES_AUTOHSCROLL
+    LTEXT           "",IDC_PATH_WARNING,105,28,235,8
+    GROUPBOX        "Publish to the following servers",IDC_STATIC,62,38,254,45
+    CONTROL         "Server 1",IDC_CHECK_SRV1,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,74,50,41,10
+    CONTROL         "Server 2",IDC_CHECK_SRV2,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,74,66,41,10
+    CONTROL         "Server 3",IDC_CHECK_SRV3,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,126,50,41,10
+    CONTROL         "Server4",IDC_CHECK_SRV4,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,126,66,41,10
+    CONTROL         "Server 5",IDC_CHECK_SRV5,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,188,50,41,10
+    CONTROL         "Server 6",IDC_CHECK_SRV6,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,188,66,41,10
+    CONTROL         "Server 7",IDC_CHECK_SRV7,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,252,50,39,11
+    CONTROL         "Server 8",IDC_CHECK_SRV8,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,252,64,42,13
+END
+
+IDD_COMPIL DIALOG 0, 0, 294, 178
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Compilation status"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_COMPIL_LOG,7,7,280,148,ES_MULTILINE | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Ok",IDOK,228,158,59,16,WS_DISABLED
+END
+
+IDD_DIALOG_MODE DIALOG 0, 0, 155, 76
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose Tool Mode"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Compile mission",ID_MODE_COMPILE,7,14,141,23
+    PUSHBUTTON      "Publish primitive",ID_MODE_PUBLISH,7,46,141,23,WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG_ADD_PATH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\red_pill.ico"
+
+IDI_ICON_FILTER         ICON                    "res\\icon_fil.ico"
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 12, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\mission_compiler_fe.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.fra\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\r\n"
+    "#include ""version.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About Ryzom Mission Compiler..."
+END
+
+#endif    // English resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE 12, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\mission_compiler_fe.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.fra\afxres.rc"          // Standard components
+#endif
+
+#include "version.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
